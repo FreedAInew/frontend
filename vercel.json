@@ -1,18 +1,19 @@
 {
-  "rewrites": [
-    { "source": "/chat", "destination": "/pages/chat.html" },
-    { "source": "/login", "destination": "/pages/login.html" },
-    { "source": "/register", "destination": "/pages/register.html" },
-    { "source": "/complete-profile", "destination": "/pages/complete-profile.html" },
-    { "source": "/forgot-password", "destination": "/pages/forgot-password.html" },
-
-    { "source": "/js/chat.js", "destination": "/assets/js/chat.js" },
-    { "source": "/js/login.js", "destination": "/assets/js/login.js" },
-    { "source": "/js/register.js", "destination": "/assets/js/register.js" },
-    { "source": "/css/chat.css", "destination": "/assets/css/chat.css" },
-    { "source": "/css/login.css", "destination": "/assets/css/login.css" },
-    { "source": "/css/register.css", "destination": "/assets/css/register.css" },
-
-    { "source": "/", "destination": "/index.html" }
-  ]
-}
+    "rewrites": [
+      { "source": "/chat", "destination": "/pages/chat.html" },
+      { "source": "/login", "destination": "/pages/login.html" },
+      { "source": "/register", "destination": "/pages/register.html" },
+      { "source": "/complete-profile", "destination": "/pages/complete-profile.html" },
+      { "source": "/forgot-password", "destination": "/pages/forgot-password.html" },
+  
+      { "source": "/js/chat.js", "destination": "/assets/js/chat.js" },
+      { "source": "/js/login.js", "destination": "/assets/js/login.js" },
+      { "source": "/js/register.js", "destination": "/assets/js/register.js" },
+      { "source": "/css/chat.css", "destination": "/assets/css/chat.css" },
+      { "source": "/css/login.css", "destination": "/assets/css/login.css" },
+      { "source": "/css/register.css", "destination": "/assets/css/register.css" },
+  
+      { "source": "/", "destination": "/index.html" }
+    ]
+  }
+  
