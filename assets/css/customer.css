@@ -1,0 +1,98 @@
+/* Variables de colores para fácil modificación */
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #ff6b6b;
+    --text-color: #333;
+    --background-color: #f7f9fc;
+    --card-bg: rgba(255, 255, 255, 0.7);
+    --border-radius: 12px;
+}
+
+/* Modo oscuro automático */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #f5f5f5;
+        --background-color: #1a1a2e;
+        --card-bg: rgba(30, 30, 50, 0.85);
+    }
+}
+
+/* Reset de estilos y tipografía moderna */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Estilos del contenedor de perfil */
+#customerInfo {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    width: clamp(280px, 40%, 500px);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover efecto de levitación */
+#customerInfo:hover {
+    transform: translateY(-5px);
+}
+
+/* Textos */
+h1 {
+    font-size: clamp(24px, 3vw, 32px);
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+/* Datos del usuario */
+p {
+    font-size: clamp(16px, 2vw, 18px);
+    margin: 10px 0;
+}
+
+/* Botón con efecto glassmorphism */
+button {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividad total */
+@media (max-width: 768px) {
+    #customerInfo {
+        width: 90%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
