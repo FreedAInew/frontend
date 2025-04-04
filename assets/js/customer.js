@@ -1,7 +1,7 @@
 // customer.js
 export async function createCustomer(token, fullName, address, dateOfBirth) {
     try {
-        const response = await fetch("http://localhost:8080/api/customers", {
+        const response = await fetch("https://websockets-production-4d17.up.railway.app/api/customers", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
