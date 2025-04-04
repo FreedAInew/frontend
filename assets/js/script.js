@@ -1,6 +1,6 @@
 // 📌 Ir a la página de login
 function irALogin() {
-    window.location.href = "login.html";
+    window.location.href = "pages/login.html";
 }
 
 // 🌙 Cambiar a modo oscuro kawaii

@@ -1,4 +1,4 @@
-import { loginUser } from "./login.js";
+import { loginUser } from "/assets/js/login.js";
 
 export async function registerUser(username, password) {
     try {
@@ -24,6 +24,6 @@ document.getElementById("registerForm").addEventListener("submit", async functio
     if (token) {
         localStorage.setItem("accessToken", token);
         localStorage.setItem("username", username);
-        window.location.href = "complete-profile.html";
+        window.location.href = "/complete-profile";
     }
 });
