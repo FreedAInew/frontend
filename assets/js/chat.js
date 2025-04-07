@@ -18,7 +18,7 @@ let stompClient = null; // Definir stompClient globalmente
 function connectToChat(token, username) {
   console.log("Conectando al chat...");
 
-  let socket = new SockJS('https://websockets-production-4d17.up.railway.app/chat');
+  let socket = new SockJS('https://websockets-1-dhxj.onrender.com/chat');
   stompClient = Stomp.over(socket); // Ahora stompClient es global
   stompClient.reconnect_delay = 0;
   let receivedMessageIds = new Set();
