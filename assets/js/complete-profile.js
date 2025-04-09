@@ -25,7 +25,7 @@ document.getElementById("completeProfileForm").addEventListener("submit", async 
         localStorage.setItem("username", fullName);
         alert("Perfil completado con éxito.");
         // Redirige al panel de chat
-        window.location.href = "chat.html";
+        window.location.href = "/chat";
     } catch (error) {
         console.error("Hubo un error al completar tu perfil:", error);
         alert("Hubo un error al completar tu perfil.");
