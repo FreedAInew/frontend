@@ -1,0 +1,147 @@
+/* RESET y base de estilo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #FFB6C1, #FFCCE1); /* Colores pastel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+    margin-top: 20px;
+}
+
+/* Título centrado */
+.title {
+    text-align: center;
+    font-size: 36px;
+    color: #FF69B4; /* Rosa fuerte */
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.5);
+    padding: 10px 0;
+}
+
+/* Estilo del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Estilo de los inputs */
+input, button {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 1px solid #FF69B4;
+    transition: 0.3s ease;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    box-shadow: 0 4px 6px rgba(255, 105, 180, 0.3);
+}
+
+/* Estilo de los inputs */
+input {
+    background-color: #FFF0F5; /* Color suave de fondo */
+    color: #FF1493;
+    font-weight: bold;
+}
+
+/* Estilo del botón */
+button {
+    background-color: #FF1493;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(255, 105, 180, 0.4);
+}
+
+button:hover {
+    background-color: #FF69B4;
+    box-shadow: 0 4px 10px rgba(255, 20, 147, 0.6);
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividad para dispositivos móviles */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .title {
+        font-size: 30px;
+    }
+
+    input, button {
+        font-size: 14px;
+    }
+}
+
+/* Para dispositivos pequeños (móviles más pequeños) */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 26px;
+    }
+
+    input, button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* Para dispositivos muy grandes (pantallas de escritorio grandes) */
+@media (min-width: 1200px) {
+    .container {
+        padding: 50px;
+    }
+    
+    .title {
+        font-size: 40px;
+    }
+
+    input, button {
+        font-size: 18px;
+    }
+}

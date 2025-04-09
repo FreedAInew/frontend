@@ -1,5 +1,18 @@
 import { createCustomer } from "./customer.js"; // Asegúrate de que customer.js exporte createCustomer correctamente
 
+// Establecer la fecha máxima permitida en el campo de fecha de nacimiento
+function setMaxDate() {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const day = String(today.getDate()).padStart(2, '0');
+    const maxDate = `${year}-${month}-${day}`;
+    
+    document.getElementById("dateOfBirth").setAttribute("max", maxDate);
+}
+
+setMaxDate();  // Establece la fecha máxima cuando se carga la página
+
 document.getElementById("completeProfileForm").addEventListener("submit", async function(event) {
     event.preventDefault();
 
