@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 localStorage.setItem("accessToken", token);
                 localStorage.setItem("username", username);
                 // Redirige al panel de chat
-                window.location.href = "chat.html";
+                window.location.href = "/chat";
             } else {
                 alert("Error al iniciar sesión. Verifica tus credenciales.");
             }
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     if (registerRedirect) {
         registerRedirect.addEventListener("click", () => {
-            window.location.href = "register.html";
+            window.location.href = "/register";
         });
     }
 });
