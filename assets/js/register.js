@@ -2,7 +2,7 @@ import { loginUser } from "/assets/js/login.js";
 
 export async function registerUser(username, password) {
     try {
-        const response = await fetch("https://websockets-production-4d17.up.railway.app/auth/register", {
+        const response = await fetch("https://mi-app-java-latest.onrender.com/auth/register", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ username, password })
