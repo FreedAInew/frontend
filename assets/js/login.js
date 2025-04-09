@@ -48,13 +48,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-
-
-
 import { PasswordToggle } from './password-toggle.js';
 
 // Inicializar para cada campo de contraseña
 document.querySelectorAll('.password-container').forEach(container => {
     new PasswordToggle(container);
 });
+
+
+
+// autoLogin.js - Lógica de login automático cada 60 segundos
+function autoLogin() {
+
+     // Verificar si el usuario ya está logueado
+     if (localStorage.getItem("accessToken")) {
+        console.log("🔑 Ya estás logueado. No se realizará login automático.");
+        return;
+    }
+
+
+    const username = "string";  // Usuario predeterminado para login
+    const password = "string";  // Contraseña predeterminada
+
+    setInterval(async () => {
+        const token = await loginUser(username, password);
+        if (token) {
+            // Guarda el token y username en localStorage
+            localStorage.setItem("accessToken", token);
+            localStorage.setItem("username", username);
+            console.log("🔑 Login automático exitoso. Token recibido.");
+            window.location.href = "/chat";  // Redirigir al chat
+        } else {
+            console.error("❌ No se pudo realizar el login automático.");
+        }
+    }, 300000); // 60 segundos
+}
+
+// Llamada para iniciar el login automático
+autoLogin();
